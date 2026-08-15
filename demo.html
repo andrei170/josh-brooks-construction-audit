@@ -30,9 +30,11 @@
     background:linear-gradient(rgba(14,16,13,.62),rgba(14,16,13,.78)),
     url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/06/20230829_084644.webp') center/cover}
   .hero .wrap{padding-top:70px;padding-bottom:70px}
+  .heroin{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  @media(max-width:860px){.heroin{grid-template-columns:1fr}}
   .kick{color:#e0824b;font-size:13px;letter-spacing:.28em;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:700}
-  h1{font-size:clamp(33px,5.2vw,54px);line-height:1.14;font-weight:700;margin:16px 0 18px;max-width:17ch}
-  .hero p{font-size:17.5px;color:#d6d6ce;max-width:52ch;margin-bottom:28px}
+  h1{font-size:clamp(32px,4.6vw,50px);line-height:1.14;font-weight:700;margin:16px 0 18px;max-width:15ch}
+  .hero p{font-size:17px;color:#d6d6ce;max-width:52ch;margin-bottom:22px}
   .cta-row{display:flex;gap:14px;flex-wrap:wrap}
   .btn{display:inline-block;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;font-size:15px;
     padding:15px 27px;border-radius:6px;letter-spacing:.02em}
@@ -40,6 +42,16 @@
   .btn.ghost{border:1.5px solid #ffffff55;color:#fff}
   .hero .micro{margin-top:18px;font-size:13.5px;color:#c2c3ba;font-family:Arial,sans-serif}
   .hero .micro b{color:#e0824b}
+  .herocard{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:26px;
+    box-shadow:0 30px 60px rgba(0,0,0,.4)}
+  .herocard h3{font-size:19px;margin-bottom:4px;font-family:Georgia,serif}
+  .herocard .sub{font-family:Arial,sans-serif;font-size:13px;color:var(--mut);margin-bottom:16px}
+  .herocard label{display:block;font-family:Arial,sans-serif;font-size:11.5px;color:var(--mut);
+    text-transform:uppercase;letter-spacing:.1em;margin:11px 0 5px}
+  .herocard select,.herocard input{width:100%;background:#0f100c;border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);padding:11px 13px;font-size:14px;font-family:Arial,sans-serif}
+  .herocard .btn{width:100%;text-align:center;margin-top:16px;border:none;cursor:pointer;font-size:15px}
+  .herocard .note{font-family:Arial,sans-serif;font-size:11.5px;color:var(--good);margin-top:10px;text-align:center}
 
   .trust{border-bottom:1px solid var(--line);background:var(--panel)}
   .trust .wrap{display:flex;justify-content:space-between;gap:18px;padding:20px 24px;flex-wrap:wrap}
@@ -86,17 +98,6 @@
   .areas span{font-family:Arial,sans-serif;font-size:13.5px;color:var(--mut);border:1px solid var(--line);
     border-radius:999px;padding:7px 14px}
 
-  .quote{background:var(--panel)}
-  .quote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding-top:64px;padding-bottom:64px}
-  @media(max-width:860px){.quote .wrap{grid-template-columns:1fr}}
-  .qform{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:26px}
-  .qform label{display:block;font-family:Arial,sans-serif;font-size:12px;color:var(--mut);
-    text-transform:uppercase;letter-spacing:.1em;margin:13px 0 6px}
-  .qform select,.qform input{width:100%;background:#0f100c;border:1px solid var(--line);border-radius:8px;
-    color:var(--ink);padding:12px 14px;font-size:15px;font-family:Arial,sans-serif}
-  .qform .btn{width:100%;text-align:center;margin-top:18px;border:none;cursor:pointer;font-size:15.5px}
-  .qform .note{font-family:Arial,sans-serif;font-size:12.5px;color:var(--good);margin-top:12px;text-align:center}
-
   .cta-final{text-align:center;padding:80px 0;position:relative;
     background:linear-gradient(rgba(14,16,13,.74),rgba(14,16,13,.88)),
     url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/hail-damage-roof-replacement-sterling-co.jpg') center/cover}
@@ -126,15 +127,30 @@
 </div>
 
 <div class="hero">
-  <div class="wrap">
-    <div class="kick">Storm &amp; Hail Damage · Front Range, Colorado</div>
-    <h1>Hail damage on your roof? Get a free inspection before you file a claim.</h1>
-    <p>Licensed, insured, and local — a real inspection, straight answers on whether your insurance claim is worth filing, no pressure either way.</p>
-    <div class="cta-row">
-      <a class="btn rust" href="#quote">Get My Free Inspection</a>
-      <a class="btn ghost" href="tel:7208287997">Call (720) 828-7997</a>
+  <div class="wrap heroin">
+    <div>
+      <div class="kick">Storm &amp; Hail Damage · Front Range, Colorado</div>
+      <h1>Hail damage on your roof? Get a free inspection before you file a claim.</h1>
+      <p>Licensed, insured, and local — a real inspection, straight answers on whether your insurance claim is worth filing, no pressure either way.</p>
+      <div class="cta-row">
+        <a class="btn ghost" href="tel:7208287997">Call (720) 828-7997</a>
+      </div>
+      <div class="micro"><b>Answered fast</b> — every enquiry gets an instant text response, not a callback queue.</div>
     </div>
-    <div class="micro"><b>Answered fast</b> — every enquiry gets an instant text response, not a callback queue.</div>
+    <div class="herocard" id="quote">
+      <h3>Free Hail Damage Inspection</h3>
+      <div class="sub">No obligation. We'll tell you straight if it's worth a claim.</div>
+      <label>What happened?</label>
+      <select><option>Recent hailstorm</option><option>Suspected roof damage</option><option>Not sure, want it checked</option></select>
+      <label>Name</label>
+      <input type="text" placeholder="Your name">
+      <label>Phone (we text you back fast)</label>
+      <input type="tel" placeholder="(720) 000-0000">
+      <label>Zip code</label>
+      <input type="text" placeholder="e.g. 80501">
+      <button class="btn rust" type="button">Request Free Inspection</button>
+      <div class="note">Instant response · No obligation · Lic. CON-24-0152</div>
+    </div>
   </div>
 </div>
 
@@ -197,26 +213,14 @@
   </div>
 </section>
 
-<section class="quote" id="quote">
-  <div class="wrap">
-    <div>
-      <div class="eyebrow">Free inspection</div>
-      <h2>Know before you file. No obligation.</h2>
-      <p class="lede">Request the inspection and get a text back fast to schedule — no waiting by the phone, no pressure to file a claim that isn't there.</p>
-      <p class="lede" style="margin-top:14px"><b style="color:#e0824b">Demo note:</b> on the live build this form fires instant text-back, books directly into the calendar, and every submission is tracked to its source — the main site stays exactly as it is.</p>
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">Free inspection, no obligation</div>
+    <h2>Know before you file.</h2>
+    <p class="lede" style="margin:0 auto">Request the inspection and get a text back fast to schedule — no waiting by the phone, no pressure to file a claim that isn't there. On the live build, every submission fires an instant text-back, books directly into the calendar, and is tracked to its source — the main site stays exactly as it is.</p>
+    <div class="cta-row" style="justify-content:center;margin-top:22px">
+      <a class="btn rust" href="#quote">Back to Free Inspection Form ↑</a>
     </div>
-    <form class="qform" onsubmit="return false">
-      <label>What happened?</label>
-      <select><option>Recent hailstorm</option><option>Suspected roof damage</option><option>Not sure, want it checked</option></select>
-      <label>Name</label>
-      <input type="text" placeholder="Your name">
-      <label>Phone (we text you back fast)</label>
-      <input type="tel" placeholder="(720) 000-0000">
-      <label>Zip code</label>
-      <input type="text" placeholder="e.g. 80501">
-      <button class="btn rust" type="submit">Request Free Inspection</button>
-      <div class="note">Instant response · No obligation · Lic. CON-24-0152</div>
-    </form>
   </div>
 </section>
 
