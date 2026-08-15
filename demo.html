@@ -4,243 +4,236 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Josh Brooks Construction — Ad Landing Page Concept</title>
+<title>Josh Brooks Construction - Ad Landing Page Concept by AG1</title>
 <style>
   :root{
-    --ink:#171310; --mut:#5c564f; --line:#e7e1d6; --paper:#fffdf8; --panel:#f6f1e6;
-    --steel:#242c37; --steel2:#333f4e; --rust:#c4551f; --rust2:#e0742f; --good:#1f7a4d;
+    --bg:#12130f; --panel:#191a15; --panel2:#20221b; --ink:#eeefe9; --mut:#a7a89e;
+    --line:#2b2c25; --rust:#c4551f; --rust2:#a3441a; --steel:#3a4655; --good:#79c996;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
 
-  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-  @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.85}}
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
-  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+  .ribbon{background:var(--rust);color:#1c0d04;text-align:center;font-size:12.5px;font-weight:700;
+    padding:7px 12px;letter-spacing:.08em;text-transform:uppercase;font-family:Arial,sans-serif}
 
-  .ribbon{position:sticky;top:0;z-index:100;background:#1a1a1a;color:#fff;text-align:center;font-size:13px;padding:9px 14px}
-  .ribbon b{color:var(--rust2)}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
-  nav{position:sticky;top:33px;z-index:90;background:rgba(255,253,248,.92);backdrop-filter:blur(8px);
-    display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--line)}
-  .logo{font-weight:800;font-size:18px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line)}
+  .logo{font-size:19px;font-weight:700;letter-spacing:.02em}
   .logo span{color:var(--rust)}
-  .navlic{font-size:11.5px;color:var(--mut);font-weight:600}
-  .navright{display:flex;align-items:center;gap:14px}
-  .navcall{background:var(--steel);color:#fff;padding:10px 18px;border-radius:8px;font-weight:700;font-size:14px;transition:transform .15s}
-  .navcall:hover{transform:translateY(-1px)}
-  .burger{display:none;flex-direction:column;gap:5px;width:24px;cursor:pointer;background:none;border:none;padding:6px}
-  .burger span{height:2px;background:var(--ink);border-radius:2px}
-  .mobmenu{display:none;position:fixed;inset:0 0 auto 0;top:0;background:var(--paper);z-index:99;
-    padding:90px 24px 30px;flex-direction:column;gap:4px}
-  .mobmenu a{padding:16px 4px;font-size:17px;font-weight:700;border-bottom:1px solid var(--line)}
-  .mobmenu.open{display:flex}
-  body.locked{overflow:hidden}
-  @media(max-width:700px){.burger{display:flex}}
+  .navcta{background:var(--rust);color:#fff;text-decoration:none;font-weight:800;font-size:14px;
+    padding:11px 20px;border-radius:6px;font-family:Arial,sans-serif;letter-spacing:.03em}
 
-  .hero{position:relative;color:#fff;overflow:hidden;isolation:isolate}
-  .hero .bgimg{position:absolute;inset:0;z-index:-2}
-  .hero .bgimg img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) brightness(.55)}
-  .hero .bgimg:after{content:"";position:absolute;inset:0;
-    background:linear-gradient(115deg,rgba(20,26,33,.95) 0%,rgba(36,44,55,.88) 42%,rgba(51,63,78,.55) 75%,rgba(51,63,78,.3) 100%)}
-  .hero .glow{position:absolute;width:480px;height:480px;border-radius:99px;top:-220px;right:-140px;z-index:-1;
-    background:radial-gradient(circle,rgba(224,116,47,.28),transparent 70%);animation:floaty 9s ease-in-out infinite}
-  .heroin{position:relative;padding:80px 0 68px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
-  @media(max-width:820px){.heroin{grid-template-columns:1fr;padding:56px 0 40px}}
-  .kicker{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.24);
-    padding:7px 15px;border-radius:999px;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:18px;font-weight:600}
-  .hero h1{font-size:44px;font-weight:800;line-height:1.12;letter-spacing:-.01em;max-width:620px}
-  .hero h1 em{font-style:normal;color:var(--rust2)}
-  .hero p{margin-top:16px;font-size:17px;color:#dfe3e8;max-width:500px}
-  .herobtns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{padding:15px 26px;border-radius:9px;font-weight:700;font-size:15px;display:inline-block;transition:transform .15s,box-shadow .15s}
-  .btnprim{background:linear-gradient(135deg,var(--rust2),var(--rust));color:#fff;box-shadow:0 12px 28px rgba(196,85,31,.4)}
-  .btnprim:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(196,85,31,.48)}
-  .btnghost{border:1.5px solid rgba(255,255,255,.45);color:#fff}
-  .heroproof{display:flex;gap:26px;margin-top:32px;flex-wrap:wrap}
-  .hp b{font-size:24px;display:block;color:var(--rust2)}
-  .hp span{font-size:12px;color:#c3cad2}
-  .herocard{background:rgba(255,253,248,.98);color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 35px 70px rgba(0,0,0,.45)}
-  .herocard h3{font-size:19px;margin-bottom:4px}
-  .herocard p{font-size:13px;color:var(--mut);margin-bottom:16px}
-  .field{margin-bottom:11px}
-  .field input,.field select{width:100%;padding:12px 13px;border-radius:8px;border:1px solid var(--line);background:var(--panel);font-size:14px}
-  .subbtn{width:100%;background:linear-gradient(135deg,var(--rust2),var(--rust));color:#fff;font-weight:800;border:none;padding:14px;border-radius:8px;font-size:15px;margin-top:6px}
-  .formnote{font-size:11px;color:var(--mut);text-align:center;margin-top:10px}
+  .hero{position:relative;min-height:76vh;display:flex;align-items:center;
+    background:linear-gradient(rgba(14,16,13,.68),rgba(14,16,13,.82)),
+    url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/06/8d4601ae-fac8-4fa2-90f2-537467f2f3d3-1_all_1573.jpg') center/cover}
+  .hero .wrap{padding-top:66px;padding-bottom:66px}
+  .kick{color:var(--rust2);color:#e0824b;font-size:13px;letter-spacing:.26em;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:700}
+  h1{font-size:clamp(33px,5.2vw,54px);line-height:1.14;font-weight:700;margin:16px 0 18px;max-width:17ch}
+  .hero p{font-size:17.5px;color:#d6d6ce;max-width:52ch;margin-bottom:28px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-family:Arial,sans-serif;font-weight:800;font-size:15px;
+    padding:15px 27px;border-radius:6px;letter-spacing:.02em}
+  .btn.rust{background:var(--rust);color:#fff}
+  .btn.ghost{border:1.5px solid #ffffff55;color:#fff}
+  .hero .micro{margin-top:18px;font-size:13.5px;color:#c2c3ba;font-family:Arial,sans-serif}
+  .hero .micro b{color:#e0824b}
 
-  section{padding:58px 0;border-top:1px solid var(--line)}
-  .h2{font-size:29px;font-weight:800;text-align:center;letter-spacing:-.01em}
-  .lede{text-align:center;color:var(--mut);max-width:580px;margin:12px auto 0;font-size:15.5px}
+  .trust{border-bottom:1px solid var(--line);background:var(--panel)}
+  .trust .wrap{display:flex;justify-content:space-between;gap:18px;padding:20px 24px;flex-wrap:wrap}
+  .titem{font-family:Arial,sans-serif;font-size:13.5px;color:var(--mut)}
+  .titem b{color:var(--ink);display:block;font-size:16px;margin-bottom:2px}
+  .titem b .star{color:#e0824b}
 
-  .gallery4{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr;gap:14px;margin-top:36px;height:440px}
-  @media(max-width:800px){.gallery4{grid-template-columns:1fr;grid-template-rows:220px 180px 180px;height:auto}}
-  .gallery4 .g1{grid-row:1/3}
-  .gimg{border-radius:14px;overflow:hidden;background:#e2ddd0;position:relative}
-  .gimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
-  .gimg:hover img{transform:scale(1.05)}
-  .gtag{position:absolute;bottom:12px;left:12px;background:rgba(23,19,16,.8);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;font-weight:600}
+  section{padding:68px 0}
+  .eyebrow{color:#e0824b;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:700}
+  h2{font-size:clamp(25px,3.2vw,36px);font-weight:700;margin:12px 0 14px}
+  .lede{color:var(--mut);font-size:16px;max-width:62ch}
 
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
-  @media(max-width:760px){.steps{grid-template-columns:1fr}}
-  .step{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;text-align:center;
-    transition:transform .25s,box-shadow .25s}
-  .step:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(23,19,16,.1)}
-  .step .n{width:38px;height:38px;border-radius:9px;background:var(--steel);color:var(--rust2);font-weight:900;
-    display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:16px}
-  .step h3{font-size:16px;margin-bottom:6px}
-  .step p{font-size:13.5px;color:var(--mut)}
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}
+  @media(max-width:860px){.svc{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.svc{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;
+    transition:transform .25s ease, border-color .25s ease}
+  .card:hover{transform:translateY(-4px);border-color:var(--rust2)}
+  .card .ph{height:170px;background-size:cover;background-position:center}
+  .card .bd{padding:16px 18px 20px}
+  .card h3{font-size:17px;margin-bottom:5px}
+  .card p{font-size:13.5px;color:var(--mut);font-family:Arial,sans-serif}
 
-  .trustbar{background:var(--panel)}
-  .tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
-  @media(max-width:760px){.tgrid{grid-template-columns:1fr 1fr}}
-  .tcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center;
-    box-shadow:0 8px 24px rgba(23,19,16,.06);transition:transform .25s}
-  .tcard:hover{transform:translateY(-3px)}
-  .tcard b{font-size:20px;display:block;color:var(--steel)}
-  .tcard span{font-size:12px;color:var(--mut)}
+  .band{background:var(--steel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .band .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:60px;padding-bottom:60px}
+  @media(max-width:860px){.band .wrap{grid-template-columns:1fr}}
+  ul.steps{list-style:none;margin-top:8px}
+  ul.steps li{display:flex;gap:16px;padding:13px 0;border-bottom:1px solid #ffffff14;font-family:Arial,sans-serif}
+  ul.steps li:last-child{border-bottom:none}
+  .n{flex:0 0 38px;height:38px;border-radius:99px;background:var(--rust);color:#fff;display:flex;
+    align-items:center;justify-content:center;font-weight:900;font-size:16px}
+  ul.steps b{display:block;font-size:15px;margin-bottom:3px}
+  ul.steps p{font-size:13.5px;color:#c9cdd4}
 
-  .quote{background:linear-gradient(150deg,var(--steel),#1c222b 60%,var(--steel2));color:#fff;border-radius:20px;padding:44px;text-align:center;
-    position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(20,26,33,.35)}
-  .quote:before{content:"";position:absolute;width:520px;height:520px;border-radius:99px;top:-260px;left:50%;transform:translateX(-50%);
-    background:radial-gradient(circle,rgba(224,116,47,.18),transparent 70%)}
-  .quote h3{position:relative;font-size:25px;font-weight:800}
-  .quote p{position:relative;color:#dfe3e8;margin-top:12px;font-size:15px;max-width:580px;margin-left:auto;margin-right:auto}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px}
+  @media(max-width:760px){.gal{grid-template-columns:1fr 1fr}}
+  .gal div{height:190px;border-radius:10px;background-size:cover;background-position:center;
+    transition:transform .25s ease;position:relative}
+  .gal div:hover{transform:scale(1.03)}
 
-  footer{background:#100d0a;color:#a89f8e;text-align:center;padding:32px 0;font-size:12.5px}
-  footer b{color:#fff}
-  .stickybar{position:fixed;bottom:0;left:0;right:0;background:var(--steel);color:#fff;padding:13px 18px;
-    display:none;justify-content:space-between;align-items:center;z-index:200;box-shadow:0 -6px 20px rgba(0,0,0,.25)}
-  .stickybar a{background:linear-gradient(135deg,var(--rust2),var(--rust));color:#fff;padding:11px 22px;border-radius:8px;font-weight:800;font-size:14px}
-  @media(max-width:700px){.stickybar{display:flex}body{padding-bottom:66px}}
+  .areas{margin-top:28px;display:flex;flex-wrap:wrap;gap:9px}
+  .areas span{font-family:Arial,sans-serif;font-size:13.5px;color:var(--mut);border:1px solid var(--line);
+    border-radius:999px;padding:7px 14px}
+
+  .quote{background:var(--panel)}
+  .quote .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding-top:64px;padding-bottom:64px}
+  @media(max-width:860px){.quote .wrap{grid-template-columns:1fr}}
+  .qform{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .qform label{display:block;font-family:Arial,sans-serif;font-size:12px;color:var(--mut);
+    text-transform:uppercase;letter-spacing:.1em;margin:13px 0 6px}
+  .qform select,.qform input{width:100%;background:#0f100c;border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);padding:12px 14px;font-size:15px;font-family:Arial,sans-serif}
+  .qform .btn{width:100%;text-align:center;margin-top:18px;border:none;cursor:pointer;font-size:15.5px}
+  .qform .note{font-family:Arial,sans-serif;font-size:12.5px;color:var(--good);margin-top:12px;text-align:center}
+
+  .cta-final{text-align:center;padding:80px 0;position:relative;
+    background:linear-gradient(rgba(14,16,13,.74),rgba(14,16,13,.88)),
+    url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/hail-damage-roof-replacement-sterling-co.jpg') center/cover}
+  .cta-final h2{font-size:clamp(27px,3.8vw,42px)}
+  .cta-final p{color:#ccc9c0;margin:12px auto 26px;max-width:52ch}
+
+  footer{padding:32px 0 90px;border-top:1px solid var(--line);color:var(--mut);font-family:Arial,sans-serif;font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#0f100c;border-top:1px solid var(--rust2);
+    display:flex;gap:10px;justify-content:center;padding:10px 14px}
+  .callbar a{flex:1;max-width:260px;text-align:center;text-decoration:none;font-family:Arial,sans-serif;
+    font-weight:800;font-size:14.5px;padding:13px 10px;border-radius:8px}
+  .callbar .c1{background:var(--rust);color:#fff}
+  .callbar .c2{border:1.5px solid var(--rust2);color:var(--ink)}
 </style>
 </head>
 <body>
 
-<div class="ribbon">Ad-campaign landing page concept for Josh Brooks Construction by AG Consulting — <b>a separate page for paid traffic, the real site stays untouched</b></div>
+<div class="ribbon">Ad-campaign landing page concept for Josh Brooks Construction by AG1 Consulting — a separate page for paid traffic, the real site stays untouched</div>
 
-<nav>
-  <div class="logo">Josh Brooks <span>Construction</span></div>
-  <div class="navright">
-    <div class="navlic">Lic. CON-24-0152</div>
-    <a href="tel:7208287997" class="navcall">📞 (720) 828-7997</a>
-    <button class="burger" id="burgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-
-<div class="mobmenu" id="mobMenu">
-  <a href="#quote">Get Free Inspection</a>
-  <a href="tel:7208287997" style="color:var(--rust)">Call (720) 828-7997</a>
+<div class="wrap">
+  <nav>
+    <div class="logo">Josh Brooks <span>Construction</span></div>
+    <a class="navcta" href="#quote">Get My Free Inspection</a>
+  </nav>
 </div>
 
 <div class="hero">
-  <div class="bgimg"><img src="https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/06/8d4601ae-fac8-4fa2-90f2-537467f2f3d3-1_all_1573.jpg" alt="Storm damage roof"></div>
-  <div class="glow"></div>
-  <div class="wrap heroin">
-    <div class="reveal in">
-      <div class="kicker">Boulder · Weld · Larimer · Jefferson · Douglas Counties, CO</div>
-      <h1>Hail damage on your roof? <em>Get a free inspection before you file a claim.</em></h1>
-      <p>Licensed, insured, and local to the Front Range — a real inspection, straight answers on whether your insurance claim is worth filing, no pressure either way.</p>
-      <div class="herobtns">
-        <a href="#quote" class="btn btnprim">Get My Free Inspection</a>
-        <a href="tel:7208287997" class="btn btnghost">Call (720) 828-7997</a>
-      </div>
-      <div class="heroproof">
-        <div class="hp"><b>115+</b><span>Google reviews</span></div>
-        <div class="hp"><b>4.5★</b><span>average rating</span></div>
-        <div class="hp"><b>Licensed</b><span>CON-24-0152</span></div>
-      </div>
+  <div class="wrap">
+    <div class="kick">Storm &amp; Hail Damage · Front Range, Colorado</div>
+    <h1>Hail damage on your roof? Get a free inspection before you file a claim.</h1>
+    <p>Licensed, insured, and local — a real inspection, straight answers on whether your insurance claim is worth filing, no pressure either way.</p>
+    <div class="cta-row">
+      <a class="btn rust" href="#quote">Get My Free Inspection</a>
+      <a class="btn ghost" href="tel:7208287997">Call (720) 828-7997</a>
     </div>
-    <div class="herocard reveal in d2">
-      <h3>Free Hail Damage Inspection</h3>
-      <p>No obligation. We'll tell you straight if it's worth a claim.</p>
-      <div class="field"><input placeholder="Your name"></div>
-      <div class="field"><input placeholder="Phone number"></div>
-      <div class="field"><select><option>What happened?</option><option>Recent hailstorm</option><option>Suspected roof damage</option><option>Not sure, want it checked</option></select></div>
-      <div class="field"><input placeholder="Zip code"></div>
-      <button class="subbtn">Request Free Inspection</button>
-      <div class="formnote">Concept preview only — this form does not submit.</div>
+    <div class="micro"><b>Answered fast</b> — every enquiry gets an instant text response, not a callback queue.</div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="titem"><b><span class="star">★</span> 4.5 average</b>115+ Google, Angi &amp; Houzz reviews</div>
+    <div class="titem"><b>Lic. CON-24-0152</b>Licensed &amp; fully insured</div>
+    <div class="titem"><b>Owner-led crews</b>Josh Brooks on your project</div>
+    <div class="titem"><b>12 years</b>operating on the Front Range</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">What this covers</div>
+    <h2>One inspection. A straight answer either way.</h2>
+    <p class="lede">Built around one offer — a free hail damage inspection — so paid traffic converts on a single, clear decision instead of a full service menu.</p>
+    <div class="svc">
+      <div class="card"><div class="ph" style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/hail-damage-roof-replacement-sterling-co.jpg')"></div><div class="bd"><h3>Hail Damage Inspection</h3><p>A real on-roof inspection, not a drive-by guess — free, no obligation.</p></div></div>
+      <div class="card"><div class="ph" style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/06/20230829_084644.webp')"></div><div class="bd"><h3>Insurance Claim Guidance</h3><p>Straight answer on whether it's worth filing — we don't push a claim that isn't there.</p></div></div>
+      <div class="card"><div class="ph" style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/roof-replacement-progress-sterling-co-hail.jpg')"></div><div class="bd"><h3>Full Roof Replacement</h3><p>If the claim's approved, the same licensed crew handles the whole job.</p></div></div>
     </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">How it works</div>
+      <h2>From first click to a straight answer.</h2>
+      <p class="lede" style="color:#c9cdd4">No pressure, no upsell if there's nothing to claim.</p>
+    </div>
+    <ul class="steps">
+      <li><span class="n">1</span><span><b>Request the free inspection</b><p>Takes under a minute, tracked from the first click.</p></span></li>
+      <li><span class="n">2</span><span><b>We inspect, straight answer</b><p>Worth a claim or not — told plainly, no pressure either way.</p></span></li>
+      <li><span class="n">3</span><span><b>You decide next steps</b><p>File a claim and we handle the work, or walk away with a clear answer.</p></span></li>
+    </ul>
   </div>
 </div>
 
 <section>
   <div class="wrap">
-    <div class="h2 reveal">Real Roofs, Real Storm Damage, Real Fixes</div>
-    <p class="lede reveal">Pulled straight from Josh Brooks Construction's own project gallery.</p>
-    <div class="gallery4">
-      <div class="gimg g1 reveal d1"><img src="https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/hail-damage-roof-replacement-sterling-co.jpg" alt="Hail damage roof replacement, Sterling CO"><div class="gtag">Hail damage replacement — Sterling, CO</div></div>
-      <div class="gimg reveal d2"><img src="https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/roof-replacement-progress-sterling-co-hail.jpg" alt="Roof replacement in progress, Sterling CO"><div class="gtag">Mid-replacement — Sterling, CO</div></div>
-      <div class="gimg reveal d3"><img src="https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/06/20230829_084644.webp" alt="Completed architectural shingle roof"><div class="gtag">Completed roof replacement</div></div>
+    <div class="eyebrow">Recent projects</div>
+    <h2>Real Front Range projects. No stock photos.</h2>
+    <div class="gal">
+      <div style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/hail-damage-roof-replacement-sterling-co.jpg')"></div>
+      <div style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/roof-replacement-progress-sterling-co-hail.jpg')"></div>
+      <div style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/06/20230829_084644.webp')"></div>
+      <div style="background-image:url('https://i0.wp.com/joshbrooksconstructionllc.com/wp-content/uploads/2026/07/lp-smartside-panel-pvc-trim-fort-collins-co-tudor-gambrel.jpg')"></div>
+    </div>
+    <div class="areas">
+      <span>Longmont</span><span>Boulder</span><span>Fort Collins</span><span>Denver Metro</span><span>Aurora</span>
+      <span>Greeley</span><span>Loveland</span><span>Firestone</span><span>Brighton</span><span>Thornton</span>
+      <span>Westminster</span><span>+ 10 more Front Range communities</span>
     </div>
   </div>
 </section>
 
-<section class="trustbar">
+<section class="quote" id="quote">
   <div class="wrap">
-    <div class="h2 reveal">Why This Page Exists Separately From the Main Site</div>
-    <p class="lede reveal">The existing site already does its job well — SEO, service pages, blog content. This page is built for one purpose only: converting paid ad traffic on a single, specific offer.</p>
-    <div class="tgrid">
-      <div class="tcard reveal d1"><b>One offer</b><span>hail inspection only, no distraction</span></div>
-      <div class="tcard reveal d2"><b>Tracked</b><span>pixel + GA4 from day one</span></div>
-      <div class="tcard reveal d3"><b>Untouched</b><span>the real site stays exactly as it is</span></div>
-      <div class="tcard reveal d4"><b>Fast follow-up</b><span>instant text-back on every submission</span></div>
+    <div>
+      <div class="eyebrow">Free inspection</div>
+      <h2>Know before you file. No obligation.</h2>
+      <p class="lede">Request the inspection and get a text back fast to schedule — no waiting by the phone, no pressure to file a claim that isn't there.</p>
+      <p class="lede" style="margin-top:14px"><b style="color:#e0824b">Demo note:</b> on the live build this form fires instant text-back, books directly into the calendar, and every submission is tracked to its source — the main site stays exactly as it is.</p>
     </div>
+    <form class="qform" onsubmit="return false">
+      <label>What happened?</label>
+      <select><option>Recent hailstorm</option><option>Suspected roof damage</option><option>Not sure, want it checked</option></select>
+      <label>Name</label>
+      <input type="text" placeholder="Your name">
+      <label>Phone (we text you back fast)</label>
+      <input type="tel" placeholder="(720) 000-0000">
+      <label>Zip code</label>
+      <input type="text" placeholder="e.g. 80501">
+      <button class="btn rust" type="submit">Request Free Inspection</button>
+      <div class="note">Instant response · No obligation · Lic. CON-24-0152</div>
+    </form>
   </div>
 </section>
 
-<section>
+<div class="cta-final">
   <div class="wrap">
-    <div class="h2 reveal">How It Works</div>
-    <div class="steps">
-      <div class="step reveal d1"><div class="n">1</div><h3>Request the free inspection</h3><p>Takes under a minute, tracked from the first click.</p></div>
-      <div class="step reveal d2"><div class="n">2</div><h3>We inspect, straight answer</h3><p>Worth a claim or not — no pressure either way.</p></div>
-      <div class="step reveal d3"><div class="n">3</div><h3>You decide next steps</h3><p>File a claim and we handle the work, or walk away with a clear answer.</p></div>
-    </div>
+    <div class="eyebrow">Ready when you are</div>
+    <h2>One inspection away from a straight answer.</h2>
+    <p>Owner-led, 115+ reviews, licensed and insured. Talk to us today — we answer.</p>
+    <a class="btn rust" href="tel:7208287997">Call (720) 828-7997</a>
   </div>
-</section>
-
-<section id="quote">
-  <div class="wrap">
-    <div class="quote reveal">
-      <h3>Free Hail Damage Inspection — Front Range, CO</h3>
-      <p>Licensed, insured, and already trusted by 400+ reviewing customers across Google, Facebook, and Houzz. This page is the front door for that traffic — the rest of the site stays exactly as it is.</p>
-      <div class="herobtns" style="justify-content:center;margin-top:20px">
-        <a href="tel:7208287997" class="btn btnprim">Call (720) 828-7997</a>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
 <footer>
-  <div class="wrap"><b>Josh Brooks Construction</b> · Longmont, CO · Lic. CON-24-0152 · (720) 828-7997<br>
-  Ad landing page concept by AG Consulting — separate from and not replacing the existing website.</div>
+  <div class="wrap">
+    <div>Josh Brooks Construction · Lic. CON-24-0152 · Licensed &amp; Insured · Longmont, CO</div>
+    <div>Ad landing page concept by AG1 Consulting · Not the live website</div>
+  </div>
 </footer>
 
-<div class="stickybar">
-  <span>Free inspection, no obligation</span>
-  <a href="tel:7208287997">Call Now</a>
+<div class="callbar">
+  <a class="c1" href="tel:7208287997">📞 Call Now</a>
+  <a class="c2" href="#quote">Free Inspection</a>
 </div>
-
-<script>
-  var burger = document.getElementById('burgerBtn');
-  var menu = document.getElementById('mobMenu');
-  burger.addEventListener('click', function(){
-    menu.classList.toggle('open');
-    document.body.classList.toggle('locked');
-  });
-  menu.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ menu.classList.remove('open'); document.body.classList.remove('locked'); });
-  });
-
-  var revealEls = document.querySelectorAll('.reveal:not(.in)');
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
-  }, {threshold:.15});
-  revealEls.forEach(function(el){ obs.observe(el); });
-</script>
 
 </body>
 </html>
